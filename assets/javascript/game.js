@@ -7,3 +7,12 @@ var computerNumber = function() {
         computerNumber();
     }
 }
+
+// $("#computerNumber").on("click", computerNumber());
+// $("#computerNumber").on("click", function(){
+//     $("#computerNumber").append(computerNumber);
+// });
+
+$("#computerNumber").on("click", function(){
+    $("this").text("This click worked");
+})
