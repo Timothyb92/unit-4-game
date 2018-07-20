@@ -1,18 +1,33 @@
-var computerNumber = function() {
-    var randomNumber = Math.floor(Math.random()* 120) + 19;
-    if ((randomNumber >= 19) && (randomNumber <= 120)){
-        return randomNumber;
-    }
-    else {
-        computerNumber();
-    }
-}
+var game = {
+        values: {
+            wins: 0,
+            losses: 0,
+            playerScore: 0,
+            computerScore: Math.floor(Math.random()*(120 - 19 + 1) + 19),
+            // getComputerScore :function() {
+            //     return Math.floor(Math.random()*(120 - 19 + 1) + 19);
+            // },
+            getButtonValue: function() {
+                return Math.floor(Math.random() * 12) + 1;
+            }
+        },
 
-// $("#computerNumber").on("click", computerNumber());
-// $("#computerNumber").on("click", function(){
-//     $("#computerNumber").append(computerNumber);
-// });
+        renderScreen: {
+            renderWins: function(){
+                var winsDiv = $("<div>");
+                $("#scoreBoard").append(winsDiv);
+                winsDiv.text("Wins: " + game.values.wins);
+            },
+            renderLosses: function(){
+                var lossesDiv = $("<div>");
+                $("#scoreBoard").append(lossesDiv);
+                lossesDiv.text("Losses: " + game.values.losses);
+            },
+            renderComputerScore: function(){
+                var computerScoreDiv = $("<div>");
+                $("#computerScore").append(computerScoreDiv);
+                computerScoreDiv.text("Target Score: " + game.values.computerScore);
+            }
+        }
 
-$("#computerNumber").on("click", function(){
-    $("this").text("This click worked");
-})
+};

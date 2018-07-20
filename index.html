@@ -5,10 +5,7 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </head>
 <body>
@@ -24,33 +21,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 text-center" id="computerNumber">
+            <div class="col-sm-6 text-center" id="computerScore">
                 Randomly generated target number (19-120)
             </div>
-            <div class="col-sm-6 text-center">
+            <div class="col-sm-6 text-center" id="scoreBoard">
                 User's wins and losses
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 text-center">
+            <div class="col-sm-6 text-center" id="playerScore">
                 User's current score
             </div>
             <div class="col-sm-6 text-center">
                 crystal buttons assigned to random numbers (1-12)
                 <div class="row">
-                    <div class="col-sm-6">
-                        <img src="assets/images/earth.png" alt="earth icon" class="iconPic">
+                    <div class="col-sm-6" value="earth">
+                        <img src="assets/images/earth.png" alt="earth icon" class="iconPic" id="earthIcon">
                     </div>
-                    <div class="col-sm-6">
-                        <img src="assets/images/fire.png" alt="fire icon" class="iconPic">
+                    <div class="col-sm-6" value="fire">
+                        <img src="assets/images/fire.png" alt="fire icon" class="iconPic" id="fireIcon">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <img src="assets/images/lightning.png" alt="lightning icon" class="iconPic">
+                    <div class="col-sm-6" value="lightning">
+                        <img src="assets/images/lightning.png" alt="lightning icon" class="iconPic" id="lightningIcon">
                     </div>
-                    <div class="col-sm-6">
-                        <img src="assets/images/water.png" alt="water icon" class="iconPic">
+                    <div class="col-sm-6" value="water">
+                        <img src="assets/images/water.png" alt="water icon" class="iconPic" id="waterIcon">
                     </div>
                 </div>
             </div>
