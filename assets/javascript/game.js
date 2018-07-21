@@ -63,5 +63,9 @@ var game = {
 };
 
 window.onload = function(){
-    
+    game.renderScreen.renderWins();
+    game.renderScreen.renderLosses();
+    game.renderScreen.renderComputerScore();
+    game.renderScreen.renderPlayerScore();
+    game.renderScreen.assignButtonVals();
 }
