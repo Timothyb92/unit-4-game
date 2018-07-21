@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
     //Object holding most important aspects of the game
     var game = {
             //Object that holds and assigns values to elements in the game
@@ -69,9 +68,6 @@ $(document).ready(function() {
 
 
     };
-
-    var clickedItem;
-
     window.onload = function(){
         game.renderScreen.renderWins();
         game.renderScreen.renderLosses();
@@ -80,8 +76,13 @@ $(document).ready(function() {
         game.gameFunctionality.assignButtonVals();
     }
 
+    //Event listener that handles player's clicks and adds point to their score accordingly
     $("#buttonHolder").on("click", function(){
         var targetId = (event.target.id);
         console.log(targetId);
+        if (targetId == "earthIcon"){
+            game.values.playerScore += $("#earthIcon").val();
+            console.log(game.values.playerScore);
+        }
     })
 })
