@@ -29,7 +29,6 @@ $(document).ready(function() {
                     lossesDiv.text("Losses: " + game.values.losses);
                 },
                 renderComputerScore: function(){
-                    game.values.getComputerScore();
                     var computerScoreDiv = $("#computerScore");
                     computerScoreDiv.text("Target Score: " + game.values.computerScore);
                 },
@@ -61,7 +60,7 @@ $(document).ready(function() {
                         game.values.playerScore = 0;
                         game.gameFunctionality.assignButtonVals();
                         game.values.getComputerScore();
-                        console.log("Player wins");
+                        game.renderScreen.renderComputerScore();
                     }
                     else if (game.values.playerScore > game.values.computerScore){
                         game.values.losses++;
@@ -69,8 +68,7 @@ $(document).ready(function() {
                         game.values.playerScore = 0;
                         game.gameFunctionality.assignButtonVals();
                         game.values.getComputerScore();
-                        console.log(game.values.playerScore);
-                        console.log("Computer wins");
+                        game.renderScreen.renderComputerScore();
                     }
                 }
             }
@@ -78,6 +76,7 @@ $(document).ready(function() {
 
     };
     window.onload = function(){
+        game.values.getComputerScore();
         game.renderScreen.renderWins();
         game.renderScreen.renderLosses();
         game.renderScreen.renderComputerScore();
