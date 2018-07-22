@@ -1,9 +1,19 @@
 div {
     border: solid red 1px;
+    background-color: snow
 }
 
 .iconPic {
     height: 150px;
     width: 150px;
     margin-bottom: 20px;
+}
+
+body {
+    background-image: url("../images/elementsBackground.png")
+}
+
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }

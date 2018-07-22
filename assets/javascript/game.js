@@ -30,7 +30,7 @@ $(document).ready(function() {
                 },
                 renderComputerScore: function(){
                     var computerScoreDiv = $("#computerScore");
-                    computerScoreDiv.text("Target Score: " + game.values.computerScore);
+                    computerScoreDiv.text(game.values.computerScore);
                 },
                 renderPlayerScore: function(){
                     var playerScoreDiv = $("#playerScore");

@@ -12,31 +12,42 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                Title
+                <h1 id="title">Master The Elements</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 text-center">
-                Instructions
+            <div class="col-sm-12 text-center" id="instructions">
+                <p>When the game starts, a random target score will be given to you.</p>
+                <p>Your score starts at zero. The goal of the game is to match your score with the target score.</p>
+                <p>Each element has a random value assigned to it. When you click on an element, its value is added to your current score.</p>
+                <p>Each time you win or lose, the target score is randomized, your current score is set to zero, and the buttons get new values.</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 text-center" id="computerScore">
-                Randomly generated target number (19-120)
-            </div>
+            <!-- <div class="col-sm-6 text-center">
+                <p>Target score</p>
+                <p id="computerScore"></p>
+            </div> -->
             <div class="col-sm-6 text-center" id="scoreBoard">
-                User's wins and losses
                 <div id="winLossAnnounce"></div>
                 <div id="wins"></div>
                 <div id="losses"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 text-center" id="playerScore">
-                User's current score
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <p>Target score</p>
+                        <p id="computerScore"></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <p>Your current score:</p>
+                        <p id="playerScore"></p>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6 text-center" id="buttonHolder">
-                crystal buttons assigned to random numbers (1-12)
                 <div class="row">
                     <div class="col-sm-6">
                         <img src="assets/images/earth.png" alt="earth icon" class="iconPic" id="earthIcon">
