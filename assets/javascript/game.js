@@ -81,8 +81,21 @@ $(document).ready(function() {
         var targetId = (event.target.id);
         console.log(targetId);
         if (targetId == "earthIcon"){
-            game.values.playerScore += $("#earthIcon").val();
+            game.values.playerScore += parseInt($("#earthIcon").attr("value"));
+            console.log(game.values.playerScore);
+        }
+        if (targetId == "fireIcon"){
+            game.values.playerScore += parseInt($("#fireIcon").attr("value"));
+            console.log(game.values.playerScore);
+        }
+        if (targetId == "lightningIcon"){
+            game.values.playerScore += parseInt($("#lightningIcon").attr("value"));
+            console.log(game.values.playerScore);
+        }
+        if (targetId == "waterIcon"){
+            game.values.playerScore += parseInt($("#waterIcon").attr("value"));
             console.log(game.values.playerScore);
         }
     })
+    console.log($("#earthIcon").val())
 })
