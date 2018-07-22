@@ -56,7 +56,7 @@ $(document).ready(function() {
                 gameOverCheck: function(){
                     if (game.values.playerScore === game.values.computerScore){
                         game.values.wins++;
-                        $("#winLossAnnounce").text("You win!!");
+                        $("#winLossAnnounce").text("YOU WIN!!");
                         game.values.playerScore = 0;
                         game.gameFunctionality.assignButtonVals();
                         game.values.getComputerScore();
@@ -64,6 +64,7 @@ $(document).ready(function() {
                     }
                     else if (game.values.playerScore > game.values.computerScore){
                         game.values.losses++;
+                        $("#winLossAnnounce").attr("style", "color: lightslategray" );
                         $("#winLossAnnounce").text("You lose..");
                         game.values.playerScore = 0;
                         game.gameFunctionality.assignButtonVals();

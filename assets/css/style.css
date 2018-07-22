@@ -1,5 +1,4 @@
 div {
-    border: solid red 1px;
     background-color: snow
 }
 
@@ -10,10 +9,41 @@ div {
 }
 
 body {
-    background-image: url("../images/elementsBackground.png")
+    background-image: url("../images/elementsBackground.png");
+    color: #6b9d3f
 }
 
 .container {
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+.marginTop50px {
+    margin-top: 50px;
+}
+
+.marginTop20px {
+    margin-top: 20px;
+}
+
+#gameStats {
+    font-size: 20pt;
+}
+
+#title {
+    margin-top: 20px;
+}
+
+#instructions {
+    margin-top: 10px;
+    color: lightslategray;
+}
+
+#title {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+#winLossAnnounce {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 40pt;
 }

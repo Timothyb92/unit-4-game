@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h1 id="title">Master The Elements</h1>
+                <h1 id="title">MASTER THE ELEMENTS</h1>
             </div>
         </div>
         <div class="row">
@@ -23,18 +24,7 @@
                 <p>Each time you win or lose, the target score is randomized, your current score is set to zero, and the buttons get new values.</p>
             </div>
         </div>
-        <div class="row">
-            <!-- <div class="col-sm-6 text-center">
-                <p>Target score</p>
-                <p id="computerScore"></p>
-            </div> -->
-            <div class="col-sm-6 text-center" id="scoreBoard">
-                <div id="winLossAnnounce"></div>
-                <div id="wins"></div>
-                <div id="losses"></div>
-            </div>
-        </div>
-        <div class="row">
+        <div class="row marginTop50px" id="gameStats">
             <div class="col-sm-6">
                 <div class="row">
                     <div class="col-sm-6 text-center">
@@ -44,6 +34,19 @@
                     <div class="col-sm-6 text-center">
                         <p>Your current score:</p>
                         <p id="playerScore"></p>
+                    </div>
+                </div>
+                <div class="row marginTop50px">
+                    <div class="col-sm-6 text-center">
+                        <p id="wins"></p>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <p id="losses"></p>
+                    </div>
+                </div>
+                <div class="row marginTop20px">
+                    <div class="col-sm-12 text-center">
+                        <p id="winLossAnnounce"></p>
                     </div>
                 </div>
             </div>
