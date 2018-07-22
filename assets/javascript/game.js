@@ -90,22 +90,16 @@ $(document).ready(function() {
         var targetId = (event.target.id);
         if (targetId == "earthIcon"){
             game.values.playerScore += parseInt($("#earthIcon").attr("value"));
-            console.log("Earth value is: " + $("#earthIcon").attr("value"))
         }
         else if (targetId == "fireIcon"){
             game.values.playerScore += parseInt($("#fireIcon").attr("value"));
-            console.log("Fire value is: " + $("#fireIcon").attr("value"))
         }
         else if (targetId == "lightningIcon"){
             game.values.playerScore += parseInt($("#lightningIcon").attr("value"));
-            console.log("Lightning value is: " + $("#lightningIcon").attr("value"))
         }
         else if (targetId == "waterIcon"){
             game.values.playerScore += parseInt($("#waterIcon").attr("value"));
-            console.log("Water value is: " + $("#waterIcon").attr("value"))
         }
-        console.log(game.values.playerScore);
-        console.log(game.values.computerScore);
         game.gameFunctionality.gameOverCheck();
         game.renderScreen.renderPlayerScore();
         game.renderScreen.renderComputerScore;

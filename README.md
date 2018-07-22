@@ -1,2 +1,5 @@
 # unit-4-game
-initial commit
+## Master The Elements
+![Game Screenshot](/assets/images/gameScreenShot.png)
+
+This repo houses the homework for the reccomended part of the fourth homework assignment. In the homework the game has a theme of crystals instead of elements, but I decided to go with a different theme. When the window loads, the game is initialized with a random value (19-120) as the target score, each element button has a random number assigned to it (1-12, and hidden from the player) and the player's score starts at zero. When the player clicks an element, its value is added to the player's current score. The objective of the game is to match your score with the target score. When the player wins or loses, the screen prints if they won or lost, and their wins or losses are increased by 1 and the game resets.
