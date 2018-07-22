@@ -10,7 +10,10 @@ div {
 
 body {
     background-image: url("../images/elementsBackground.png");
-    color: #6b9d3f
+    color: #6b9d3f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
