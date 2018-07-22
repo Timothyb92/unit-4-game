@@ -7,7 +7,12 @@ $(document).ready(function() {
                 wins: 0,
                 losses: 0,
                 playerScore: 0,
-                computerScore: Math.floor(Math.random()*(120 - 19 + 1) + 19),
+                computerScore: 0,
+                getComputerScore: function() {
+                    game.values.computerScore = Math.floor(Math.random()*(120 - 19 + 1) + 19);
+                    return game.values.computerScore;
+                },
+        
                 getButtonValue: function() {
                     return Math.floor(Math.random() * 12) + 1;
                 }
@@ -16,23 +21,20 @@ $(document).ready(function() {
             //Object that holds methods to render game's starting information
             renderScreen: {
                 renderWins: function(){
-                    var winsDiv = $("<div>");
-                    $("#scoreBoard").append(winsDiv);
+                    var winsDiv = $("#wins");
                     winsDiv.text("Wins: " + game.values.wins);
                 },
                 renderLosses: function(){
-                    var lossesDiv = $("<div>");
-                    $("#scoreBoard").append(lossesDiv);
+                    var lossesDiv = $("#losses");
                     lossesDiv.text("Losses: " + game.values.losses);
                 },
                 renderComputerScore: function(){
-                    var computerScoreDiv = $("<div>");
-                    $("#computerScore").append(computerScoreDiv);
+                    game.values.getComputerScore();
+                    var computerScoreDiv = $("#computerScore");
                     computerScoreDiv.text("Target Score: " + game.values.computerScore);
                 },
                 renderPlayerScore: function(){
-                    var playerScoreDiv = $("<div>");
-                    $("#playerScore").append(playerScoreDiv);
+                    var playerScoreDiv = $("#playerScore");
                     playerScoreDiv.text(game.values.playerScore);
                 }
             },
@@ -53,14 +55,21 @@ $(document).ready(function() {
 
                 //Checks player score against computer score and adds wins or losses accordingly
                 gameOverCheck: function(){
-                    if (this.playerScore === this.computerScore){
-                        this.wins++;
-                        $("#playerScore").prepend("You win!!");
+                    if (game.values.playerScore === game.values.computerScore){
+                        game.values.wins++;
+                        $("#winLossAnnounce").text("You win!!");
+                        game.values.playerScore = 0;
+                        game.gameFunctionality.assignButtonVals();
+                        game.values.getComputerScore();
                         console.log("Player wins");
                     }
-                    else if (this.playerScore > this.computerScore){
-                        this.losses++;
-                        $("#playerScore").prepend("You lose..");
+                    else if (game.values.playerScore > game.values.computerScore){
+                        game.values.losses++;
+                        $("#winLossAnnounce").text("You lose..");
+                        game.values.playerScore = 0;
+                        game.gameFunctionality.assignButtonVals();
+                        game.values.getComputerScore();
+                        console.log(game.values.playerScore);
                         console.log("Computer wins");
                     }
                 }
@@ -79,23 +88,28 @@ $(document).ready(function() {
     //Event listener that handles player's clicks and adds point to their score accordingly
     $("#buttonHolder").on("click", function(){
         var targetId = (event.target.id);
-        console.log(targetId);
         if (targetId == "earthIcon"){
             game.values.playerScore += parseInt($("#earthIcon").attr("value"));
-            console.log(game.values.playerScore);
+            console.log("Earth value is: " + $("#earthIcon").attr("value"))
         }
-        if (targetId == "fireIcon"){
+        else if (targetId == "fireIcon"){
             game.values.playerScore += parseInt($("#fireIcon").attr("value"));
-            console.log(game.values.playerScore);
+            console.log("Fire value is: " + $("#fireIcon").attr("value"))
         }
-        if (targetId == "lightningIcon"){
+        else if (targetId == "lightningIcon"){
             game.values.playerScore += parseInt($("#lightningIcon").attr("value"));
-            console.log(game.values.playerScore);
+            console.log("Lightning value is: " + $("#lightningIcon").attr("value"))
         }
-        if (targetId == "waterIcon"){
+        else if (targetId == "waterIcon"){
             game.values.playerScore += parseInt($("#waterIcon").attr("value"));
-            console.log(game.values.playerScore);
+            console.log("Water value is: " + $("#waterIcon").attr("value"))
         }
+        console.log(game.values.playerScore);
+        console.log(game.values.computerScore);
+        game.gameFunctionality.gameOverCheck();
+        game.renderScreen.renderPlayerScore();
+        game.renderScreen.renderComputerScore;
+        game.renderScreen.renderWins();
+        game.renderScreen.renderLosses();
     })
-    console.log($("#earthIcon").val())
 })
